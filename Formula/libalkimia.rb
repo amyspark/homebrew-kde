@@ -3,9 +3,8 @@ require_relative "../lib/cmake"
 class Libalkimia < Formula
   desc "Library used by KDE Finance applications"
   homepage "https://kmymoney.org"
-  url "https://download.kde.org/stable/alkimia/8.1.2/alkimia-8.1.2.tar.xz"
-  sha256 "cf846ee87b9cc630f58e0bdd23334296810ba3bcc1751fe2f4722161897ee33a"
-  head "https://invent.kde.org/office/alkimia.git", branch: "master"
+  url "https://download.kde.org/stable/alkimia/8.2.1/alkimia-8.2.1.tar.xz"
+  sha256 "f921410e180e0a5811e1ee2926954920c6576a72b3b65f53791faa6c85fcb689"
 
   depends_on "cmake" => [:build, :test]
   depends_on "extra-cmake-modules@5" => [:build, :test]
