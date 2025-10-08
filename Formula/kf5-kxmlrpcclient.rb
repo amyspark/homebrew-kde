@@ -9,7 +9,7 @@ class Kf5Kxmlrpcclient < Formula
 
   depends_on "cmake" => [:build, :test]
   depends_on "doxygen" => :build
-  depends_on "extra-cmake-modules" => [:build, :test]
+  depends_on "extra-cmake-modules@5" => [:build, :test]
   depends_on "graphviz" => :build
   depends_on "ninja" => :build
 

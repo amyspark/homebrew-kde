@@ -8,9 +8,9 @@ class Kf5Kdelibs4support < Formula
   head "https://invent.kde.org/frameworks/kdelibs4support.git", branch: "master"
 
   depends_on "cmake" => [:build, :test]
-  depends_on "extra-cmake-modules" => [:build, :test]
+  depends_on "extra-cmake-modules@5" => [:build, :test]
   depends_on "kde-mac/kde/kf5-kdesignerplugin" => :build
-  depends_on "kdoctools" => :build
+  depends_on "kdoctools@5" => :build
   depends_on "ninja" => :build
 
   depends_on "kde-mac/kde/kf5-kded"
@@ -67,7 +67,7 @@ class Kf5Kdelibs4support < Formula
 end
 
 # Patch based from
-# https://github.com/KDE/kdoctools/blob/master/cmake/FindDocBookXML4.cmake
+# https://github.com/KDE/kdoctools@5/blob/master/cmake/FindDocBookXML4.cmake
 
 __END__
 diff --git a/cmake/FindDocBookXML4.cmake b/cmake/FindDocBookXML4.cmake

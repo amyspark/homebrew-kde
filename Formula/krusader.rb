@@ -8,18 +8,18 @@ class Krusader < Formula
   head "https://invent.kde.org/utilities/krusader.git", branch: "master"
 
   depends_on "cmake" => [:build, :test]
-  depends_on "extra-cmake-modules" => [:build, :test]
+  depends_on "extra-cmake-modules@5" => [:build, :test]
   depends_on "ninja" => :build
 
   depends_on "gettext"
   depends_on "hicolor-icon-theme"
-  depends_on "karchive"
+  depends_on "karchive@5"
   depends_on "kde-mac/kde/kf5-kio"
   depends_on "kde-mac/kde/kf5-kparts"
   depends_on "kde-mac/kde/kf5-kwallet"
   depends_on "kde-mac/kde/kf5-kxmlgui"
   depends_on "kde-mac/kde/kio-extras"
-  depends_on "kdoctools"
+  depends_on "kdoctools@5"
 
   def install
     system "cmake", *kde_cmake_args

@@ -8,8 +8,8 @@ class Konversation < Formula
   head "https://invent.kde.org/network/konversation.git", branch: "master"
 
   depends_on "cmake" => [:build, :test]
-  depends_on "extra-cmake-modules" => [:build, :test]
-  depends_on "kdoctools" => :build
+  depends_on "extra-cmake-modules@5" => [:build, :test]
+  depends_on "kdoctools@5" => :build
   depends_on "ninja" => :build
 
   depends_on "hicolor-icon-theme"
@@ -19,7 +19,7 @@ class Konversation < Formula
   depends_on "kde-mac/kde/kf5-kio"
   depends_on "kde-mac/kde/kf5-knotifyconfig"
   depends_on "kde-mac/kde/kf5-kparts"
-  depends_on "qca"
+  depends_on "qca@2
 
   def install
     system "cmake", *kde_cmake_args

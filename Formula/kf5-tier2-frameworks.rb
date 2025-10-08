@@ -25,7 +25,7 @@ class Kf5Tier2Frameworks < Formula
   depends_on "kde-mac/kde/kf5-kpty"
   depends_on "kde-mac/kde/kf5-kunitconversion"
   depends_on "kde-mac/kde/kf5-tier1-frameworks"
-  depends_on "kdoctools"
+  depends_on "kdoctools@5"
 
   def install
     touch "empty"

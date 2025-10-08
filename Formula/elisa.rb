@@ -8,7 +8,7 @@ class Elisa < Formula
   head "https://invent.kde.org/multimedia/elisa.git", branch: "master"
 
   depends_on "cmake" => [:build, :test]
-  depends_on "extra-cmake-modules" => [:build, :test]
+  depends_on "extra-cmake-modules@5" => [:build, :test]
   depends_on "gettext" => :build
   depends_on "ninja" => :build
 

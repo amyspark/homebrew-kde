@@ -9,8 +9,8 @@ class Kile < Formula
   head "https://invent.kde.org/office/kile.git", branch: "master"
 
   depends_on "cmake" => :build
-  depends_on "extra-cmake-modules" => :build
-  depends_on "kdoctools" => :build
+  depends_on "extra-cmake-modules@5" => :build
+  depends_on "kdoctools@5" => :build
   depends_on "ninja" => :build
 
   depends_on "kde-mac/kde/kf5-khtml"

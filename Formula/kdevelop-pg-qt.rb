@@ -8,7 +8,7 @@ class KdevelopPgQt < Formula
   head "https://invent.kde.org/kdevelop/kdevelop-pg-qt.git", branch: "master"
 
   depends_on "cmake" => [:build, :test]
-  depends_on "extra-cmake-modules" => [:build, :test]
+  depends_on "extra-cmake-modules@5" => [:build, :test]
   depends_on "ninja" => :build
 
   depends_on "qt@5"

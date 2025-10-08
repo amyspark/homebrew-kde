@@ -12,8 +12,8 @@ class Kf5Tier1Frameworks < Formula
     skip "Meta package"
   end
 
-  depends_on "extra-cmake-modules"
-  depends_on "karchive"
+  depends_on "extra-cmake-modules@5"
+  depends_on "karchive@5"
   depends_on "kde-mac/kde/kf5-attica"
   depends_on "kde-mac/kde/kf5-breeze-icons"
   depends_on "kde-mac/kde/kf5-kcodecs"
@@ -33,7 +33,7 @@ class Kf5Tier1Frameworks < Formula
   depends_on "kde-mac/kde/kf5-solid"
   depends_on "kde-mac/kde/kf5-sonnet"
   depends_on "kde-mac/kde/kf5-syntax-highlighting"
-  depends_on "ki18n"
+  depends_on "ki18n@5"
   depends_on "threadweaver"
 
   def install

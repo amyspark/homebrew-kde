@@ -10,9 +10,9 @@ class Okular < Formula
   depends_on "chmlib" => :build
   depends_on "cmake" => [:build, :test]
   depends_on "ebook-tools" => :build
-  depends_on "extra-cmake-modules" => [:build, :test]
+  depends_on "extra-cmake-modules@5" => [:build, :test]
   depends_on "kde-mac/kde/kf5-khtml" => :build
-  depends_on "kdoctools" => :build
+  depends_on "kdoctools@5" => :build
   depends_on "ninja" => :build
 
   depends_on "discount"
@@ -28,7 +28,7 @@ class Okular < Formula
   depends_on "kde-mac/kde/phonon"
   depends_on "libspectre"
   depends_on "poppler-qt5"
-  depends_on "qca"
+  depends_on "qca@2
   depends_on "threadweaver"
   depends_on "zlib"
 

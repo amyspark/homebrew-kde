@@ -8,8 +8,8 @@ class Tellico < Formula
   head "https://invent.kde.org/office/tellico.git", branch: "master"
 
   depends_on "cmake" => [:build]
-  depends_on "extra-cmake-modules" => [:build]
-  depends_on "kdoctools" => [:build]
+  depends_on "extra-cmake-modules@5" => [:build]
+  depends_on "kdoctools@5" => [:build]
   depends_on "ninja" => [:build]
 
   depends_on "exempi"

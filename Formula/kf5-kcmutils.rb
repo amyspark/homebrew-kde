@@ -6,16 +6,21 @@ class Kf5Kcmutils < Formula
   url "https://download.kde.org/stable/frameworks/5.111/kcmutils-5.111.0.tar.xz"
   sha256 "e0f888952a8653355eb93e80f1aa87a0fa548fee0a9e9cae5214c14a962ccd26"
   head "https://invent.kde.org/frameworks/kcmutils.git", branch: "master"
+  revision 2
 
   depends_on "cmake" => [:build, :test]
   depends_on "doxygen" => :build
-  depends_on "extra-cmake-modules" => [:build, :test]
+  depends_on "extra-cmake-modules@5" => [:build, :test]
   depends_on "graphviz" => :build
   depends_on "ninja" => :build
 
   depends_on "kde-mac/kde/kf5-kdeclarative"
 
   def install
+    inreplace "tools/CMakeLists.txt",
+              "target_link_libraries(kcmdesktopfilegenerator\ Qt::Core)",
+              "target_link_libraries(kcmdesktopfilegenerator\ Qt::Core)\nset_target_properties(kcmdesktopfilegenerator\ PROPERTIES\ MACOSX_BUNDLE\ OFF)"
+
     system "cmake", *kde_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"

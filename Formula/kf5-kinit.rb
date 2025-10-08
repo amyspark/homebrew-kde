@@ -8,8 +8,8 @@ class Kf5Kinit < Formula
   head "https://invent.kde.org/frameworks/kinit.git", branch: "master"
 
   depends_on "cmake" => [:build, :test]
-  depends_on "extra-cmake-modules" => [:build, :test]
-  depends_on "kdoctools" => :build
+  depends_on "extra-cmake-modules@5" => [:build, :test]
+  depends_on "kdoctools@5" => :build
   depends_on "ninja" => :build
 
   depends_on "kde-mac/kde/kf5-kio"

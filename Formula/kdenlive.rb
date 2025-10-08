@@ -8,8 +8,8 @@ class Kdenlive < Formula
   head "https://invent.kde.org/multimedia/kdenlive.git", branch: "master"
 
   depends_on "cmake" => [:build, :test]
-  depends_on "extra-cmake-modules" => [:build, :test]
-  depends_on "kdoctools" => :build
+  depends_on "extra-cmake-modules@5" => [:build, :test]
+  depends_on "kdoctools@5" => :build
   depends_on "ninja" => :build
   depends_on "shared-mime-info" => :build
 

@@ -9,10 +9,10 @@ class Kf5Kconfigwidgets < Formula
 
   depends_on "cmake" => [:build, :test]
   depends_on "doxygen" => :build
-  depends_on "extra-cmake-modules" => [:build, :test]
+  depends_on "extra-cmake-modules@5" => [:build, :test]
   depends_on "gettext" => :build
   depends_on "graphviz" => :build
-  depends_on "kdoctools" => :build
+  depends_on "kdoctools@5" => :build
   depends_on "ninja" => :build
 
   depends_on "kde-mac/kde/kf5-kauth"
@@ -20,7 +20,7 @@ class Kf5Kconfigwidgets < Formula
   depends_on "kde-mac/kde/kf5-kconfig"
   depends_on "kde-mac/kde/kf5-kguiaddons"
   depends_on "kde-mac/kde/kf5-kwidgetsaddons"
-  depends_on "ki18n"
+  depends_on "ki18n@5"
 
   def install
     system "cmake", *kde_cmake_args

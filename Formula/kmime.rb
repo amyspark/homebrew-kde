@@ -8,12 +8,12 @@ class Kmime < Formula
   head "https://invent.kde.org/pim/kmime.git", branch: "master"
 
   depends_on "cmake" => [:build, :test]
-  depends_on "extra-cmake-modules" => [:build, :test]
+  depends_on "extra-cmake-modules@5" => [:build, :test]
   depends_on "gettext" => :build
   depends_on "ninja" => :build
 
   depends_on "kde-mac/kde/kf5-kcodecs"
-  depends_on "ki18n"
+  depends_on "ki18n@5"
 
   def install
     system "cmake", *kde_cmake_args
