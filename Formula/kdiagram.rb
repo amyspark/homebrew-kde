@@ -14,6 +14,10 @@ class Kdiagram < Formula
   depends_on "qt@5"
 
   def install
+    inreplace "CMakeLists.txt",
+              "project(\ kdiagram\ )",
+              "project(kdiagram\ VERSION\ 2.8.0)"
+
     system "cmake", *kde_cmake_args
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
