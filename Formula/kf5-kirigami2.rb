@@ -6,6 +6,7 @@ class Kf5Kirigami2 < Formula
   url "https://download.kde.org/stable/frameworks/5.111/kirigami2-5.111.0.tar.xz"
   sha256 "20546033ea24d72db8d7abf3800dfa271c6595a5c1d0d3b9a588e01d2fdba611"
   head "https://invent.kde.org/frameworks/kirigami.git", branch: "master"
+  revision 1
 
   depends_on "cmake" => [:build, :test]
   depends_on "doxygen" => :build
@@ -14,7 +15,7 @@ class Kf5Kirigami2 < Formula
   depends_on "kde-mac/kde/kf5-kpackage" => :build
   depends_on "ninja" => :build
 
-  depends_on "qt@5"
+  depends_on "kde-mac/kde/qt@5"
 
   def install
     system "cmake", *kde_cmake_args

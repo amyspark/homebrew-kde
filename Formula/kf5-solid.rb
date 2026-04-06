@@ -6,6 +6,7 @@ class Kf5Solid < Formula
   url "https://download.kde.org/stable/frameworks/5.111/solid-5.111.0.tar.xz"
   sha256 "b97d2b8eaeff0400f6fe18a6824751f32cd0604b9f2593b365a3764c851819f3"
   head "https://invent.kde.org/frameworks/solid.git", branch: "master"
+  revision 1
 
   depends_on "bison" => :build
   depends_on "cmake" => [:build, :test]
@@ -15,7 +16,7 @@ class Kf5Solid < Formula
   depends_on "graphviz" => :build
   depends_on "ninja" => :build
 
-  depends_on "qt@5"
+  depends_on "kde-mac/kde/qt@5"
 
   def install
     # args = kde_cmake_args

@@ -6,6 +6,7 @@ class Tellico < Formula
   url "https://tellico-project.org/files/tellico-3.5.2.tar.xz"
   sha256 "02c2b8e002d7ba23dafc8a2e7e26a4fc4bfb1395c414543502e56e29ec3e5353"
   head "https://invent.kde.org/office/tellico.git", branch: "master"
+  revision 1
 
   depends_on "cmake" => [:build]
   depends_on "extra-cmake-modules@5" => [:build]
@@ -23,7 +24,7 @@ class Tellico < Formula
   depends_on "kde-mac/kde/kf5-solid"
   depends_on "libcdio"
   depends_on "poppler-qt5"
-  depends_on "qt@5"
+  depends_on "kde-mac/kde/qt@5"
   depends_on "taglib"
   depends_on "yaz"
 

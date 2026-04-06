@@ -11,7 +11,8 @@ class KdoctoolsAT5 < Formula
   stable do
     url "https://download.kde.org/stable/frameworks/5.115/kdoctools-5.115.0.tar.xz"
     sha256 "51e90910f75caf45334961a881082a06c52f292103f1975a5d0a13f39d2fe243"
-    depends_on "qt@5"
+    depends_on "kde-mac/kde/qt@5"
+    revision 1
   end
 
   depends_on "cmake" => [:build, :test]

@@ -6,6 +6,7 @@ class Kf5Kjs < Formula
   url "https://download.kde.org/stable/frameworks/5.111/portingAids/kjs-5.111.0.tar.xz"
   sha256 "0f947fb59a418362ac7bde8c4183775353c31544213c4ee45c0e3d779831cf23"
   head "https://invent.kde.org/frameworks/kjs.git", branch: "master"
+  revision 1
 
   depends_on "cmake" => [:build, :test]
   depends_on "extra-cmake-modules@5" => [:build, :test]
@@ -13,7 +14,7 @@ class Kf5Kjs < Formula
   depends_on "ninja" => :build
 
   depends_on "pcre"
-  depends_on "qt@5"
+  depends_on "kde-mac/kde/qt@5"
 
   def install
     system "cmake", *kde_cmake_args

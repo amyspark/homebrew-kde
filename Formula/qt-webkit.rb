@@ -3,7 +3,7 @@ require_relative "../lib/cmake"
 class QtWebkit < Formula
   desc "Port of WebKit on top of Qt"
   homepage "https://github.com/movableink/webkit"
-  revision 8
+  revision 9
   head "https://github.com/movableink/webkit.git", branch: "master"
 
   depends_on "cmake" => [:build, :test]
@@ -16,7 +16,7 @@ class QtWebkit < Formula
 
   depends_on "gst-plugins-base"
   depends_on "libxslt"
-  depends_on "qt@5"
+  depends_on "kde-mac/kde/qt@5"
   depends_on "webp"
   depends_on "woff2"
   depends_on "zlib"

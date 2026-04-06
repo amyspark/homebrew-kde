@@ -6,6 +6,7 @@ class Kf5Kjobwidgets < Formula
   url "https://download.kde.org/stable/frameworks/5.111/kjobwidgets-5.111.0.tar.xz"
   sha256 "6a8ff4e3506bd06d85a890debe1d6e8e5072c406051d8405690aae4017f9bb21"
   head "https://invent.kde.org/frameworks/kjobwidgets.git", branch: "master"
+  revision 1
 
   depends_on "cmake" => [:build, :test]
   depends_on "doxygen" => :build
@@ -15,7 +16,7 @@ class Kf5Kjobwidgets < Formula
 
   depends_on "kde-mac/kde/kf5-kcoreaddons"
   depends_on "kde-mac/kde/kf5-kwidgetsaddons"
-  depends_on "qt@5"
+  depends_on "kde-mac/kde/qt@5"
 
   def install
     system "cmake", *kde_cmake_args

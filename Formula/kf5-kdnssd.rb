@@ -6,6 +6,7 @@ class Kf5Kdnssd < Formula
   url "https://download.kde.org/stable/frameworks/5.111/kdnssd-5.111.0.tar.xz"
   sha256 "00eabea81224983f941bb378f633e4563be7a8955b877bd198165c84def94d6b"
   head "https://invent.kde.org/frameworks/kdnssd.git", branch: "master"
+  revision 1
 
   depends_on "cmake" => [:build, :test]
   depends_on "doxygen" => :build
@@ -13,7 +14,7 @@ class Kf5Kdnssd < Formula
   depends_on "graphviz" => :build
   depends_on "ninja" => :build
 
-  depends_on "qt@5"
+  depends_on "kde-mac/kde/qt@5"
 
   def install
     system "cmake", *kde_cmake_args

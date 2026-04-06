@@ -6,13 +6,14 @@ class Poxml < Formula
   url "https://download.kde.org/stable/release-service/23.08.2/src/poxml-23.08.2.tar.xz"
   sha256 "0c95d7876e6f867c051eca357f460cd5cedd58c139b9384fecadfff58685c036"
   head "https://invent.kde.org/sdk/poxml.git", branch: "master"
+  revision 1
 
   depends_on "cmake" => [:build, :test]
   depends_on "ninja" => :build
 
   depends_on "gettext"
   depends_on "kdoctools@5"
-  depends_on "qt@5"
+  depends_on "kde-mac/kde/qt@5"
 
   patch :DATA
 

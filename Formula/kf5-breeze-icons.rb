@@ -6,12 +6,13 @@ class Kf5BreezeIcons < Formula
   url "https://download.kde.org/stable/frameworks/5.111/breeze-icons-5.111.0.tar.xz"
   sha256 "4c570e4c5f75a30f911db6fe5d907dfb58a02d2afbd160d81b51bfc8dc5b3aef"
   head "https://invent.kde.org/frameworks/breeze-icons.git", branch: "master"
+  revision 1
 
   depends_on "cmake" => [:build, :test]
   depends_on "extra-cmake-modules@5" => [:build, :test]
   depends_on "ninja" => :build
 
-  depends_on "qt@5"
+  depends_on "kde-mac/kde/qt@5"
 
   def install
     args = %w[

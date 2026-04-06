@@ -6,13 +6,14 @@ class Libkexiv2 < Formula
   url "https://download.kde.org/stable/release-service/23.08.2/src/libkexiv2-23.08.2.tar.xz"
   sha256 "d06e36a408bf2e846a18056a1f15e61d981fa2a1fceb81f7c15136604319d033"
   head "https://invent.kde.org/graphics/libkexiv2.git", branch: "master"
+  revision 1
 
   depends_on "cmake" => [:build, :test]
   depends_on "extra-cmake-modules@5" => [:build, :test]
   depends_on "ninja" => :build
 
   depends_on "exiv2"
-  depends_on "qt@5"
+  depends_on "kde-mac/kde/qt@5"
 
   def install
     system "cmake", *kde_cmake_args

@@ -6,6 +6,7 @@ class Kf5Kidletime < Formula
   url "https://download.kde.org/stable/frameworks/5.111/kidletime-5.111.0.tar.xz"
   sha256 "3b8af333383b4f54ceb93b9802c91f9288c1ff8e1464277f41e6eb5c47ab0ad4"
   head "https://invent.kde.org/frameworks/kidletime.git", branch: "master"
+  revision 1
 
   depends_on "cmake" => [:build, :test]
   depends_on "doxygen" => :build
@@ -13,7 +14,7 @@ class Kf5Kidletime < Formula
   depends_on "graphviz" => :build
   depends_on "ninja" => :build
 
-  depends_on "qt@5"
+  depends_on "kde-mac/kde/qt@5"
 
   def install
     system "cmake", *kde_cmake_args

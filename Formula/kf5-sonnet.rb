@@ -6,6 +6,7 @@ class Kf5Sonnet < Formula
   url "https://download.kde.org/stable/frameworks/5.111/sonnet-5.111.0.tar.xz"
   sha256 "70ec214af09105a07dd418f10de5ff6590b13442ee170914ad01a9da32c06a35"
   head "https://invent.kde.org/frameworks/sonnet.git", branch: "master"
+  revision 1
 
   depends_on "cmake" => [:build, :test]
   depends_on "doxygen" => :build
@@ -15,7 +16,7 @@ class Kf5Sonnet < Formula
 
   depends_on "hunspell"
   depends_on "libvoikko"
-  depends_on "qt@5"
+  depends_on "kde-mac/kde/qt@5"
 
   depends_on "aspell" => :optional
   depends_on "hspell" => :optional

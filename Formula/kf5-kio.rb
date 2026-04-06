@@ -6,6 +6,7 @@ class Kf5Kio < Formula
   url "https://download.kde.org/stable/frameworks/5.111/kio-5.111.0.tar.xz"
   sha256 "51bfd270942bcd80d8c3bfb72ee299d4d04a257f496b1843d9335d0db9afd045"
   head "https://invent.kde.org/frameworks/kio.git", branch: "master"
+  revision 1
 
   depends_on "cmake" => [:build, :test]
   depends_on "doxygen" => :build
@@ -20,7 +21,7 @@ class Kf5Kio < Formula
   depends_on "kde-mac/kde/kf5-kwallet"
   depends_on "kde-mac/kde/kf5-solid"
   depends_on "libxslt"
-  depends_on "qt@5"
+  depends_on "kde-mac/kde/qt@5"
 
   def install
     system "cmake", *kde_cmake_args

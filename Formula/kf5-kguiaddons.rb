@@ -6,6 +6,7 @@ class Kf5Kguiaddons < Formula
   url "https://download.kde.org/stable/frameworks/5.111/kguiaddons-5.111.0.tar.xz"
   sha256 "f7deb0fd5f4ab6eb78b78357b95f0d93b8008253793315d94f5aa6688a0699c5"
   head "https://invent.kde.org/frameworks/kguiaddons.git", branch: "master"
+  revision 1
 
   depends_on "cmake" => [:build, :test]
   depends_on "doxygen" => :build
@@ -13,7 +14,7 @@ class Kf5Kguiaddons < Formula
   depends_on "graphviz" => :build
   depends_on "ninja" => :build
 
-  depends_on "qt@5"
+  depends_on "kde-mac/kde/qt@5"
 
   def install
     system "cmake", "-DWITH_WAYLAND=OFF", *kde_cmake_args

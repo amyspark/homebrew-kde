@@ -6,6 +6,7 @@ class KdeconnectKde < Formula
   url "https://download.kde.org/stable/release-service/23.08.2/src/kdeconnect-kde-23.08.2.tar.xz"
   sha256 "36621b8aac77e36b2650c0daf8376004f889d924eadf457d5d02a4d7b0013bb6"
   head "https://invent.kde.org/network/kdeconnect-kde.git", branch: "master"
+  revision 1
 
   depends_on "cmake" => [:build, :test]
   depends_on "extra-cmake-modules@5" => [:build, :test]
@@ -25,7 +26,7 @@ class KdeconnectKde < Formula
   depends_on "kdoctools@5"
   depends_on "ki18n@5"
   depends_on "qca@2"
-  depends_on "qt@5"
+  depends_on "kde-mac/kde/qt@5"
 
   def install
     system "cmake", *kde_cmake_args

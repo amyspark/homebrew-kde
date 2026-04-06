@@ -6,12 +6,13 @@ class Kdiagram < Formula
   url "https://download.kde.org/stable/kdiagram/2.8.0/kdiagram-2.8.0.tar.xz"
   sha256 "579dad3bd1ea44b5a20c0f133ebf47622e38960f9c7c8b3a316be30a369f431f"
   head "https://invent.kde.org/graphics/kdiagram.git", branch: "master"
+  revision 1
 
   depends_on "cmake" => [:build, :test]
   depends_on "extra-cmake-modules@5" => [:build, :test]
   depends_on "ninja" => :build
 
-  depends_on "qt@5"
+  depends_on "kde-mac/kde/qt@5"
 
   def install
     inreplace "CMakeLists.txt",

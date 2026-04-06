@@ -11,7 +11,8 @@ class KarchiveAT5 < Formula
   stable do
     url "https://download.kde.org/stable/frameworks/5.115/karchive-5.115.0.tar.xz"
     sha256 "e89951c58beca1f9802b9a3a8b8b2beff9b534d2de433ad7947258dd27d6b475"
-    depends_on "qt@5"
+    depends_on "kde-mac/kde/qt@5"
+    revision 1
   end
 
   depends_on "cmake" => [:build, :test]

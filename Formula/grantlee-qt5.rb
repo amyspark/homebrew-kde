@@ -5,6 +5,7 @@ class GrantleeQt5 < Formula
   sha256 "ba288ae9ed37ec0c3622ceb40ae1f7e1e6b2ea89216ad8587f0863d64be24f06"
   license "LGPL-2.1-or-later"
   head "https://github.com/steveire/grantlee.git", branch: "master"
+  revision 1
 
   livecheck do
     formula "grantlee"
@@ -16,7 +17,7 @@ class GrantleeQt5 < Formula
   depends_on "doxygen" => :build
   depends_on "graphviz" => :build
 
-  depends_on "qt@5"
+  depends_on "kde-mac/kde/qt@5"
 
   def install
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args

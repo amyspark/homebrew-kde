@@ -6,6 +6,7 @@ class Lokalize < Formula
   url "https://download.kde.org/stable/release-service/23.08.2/src/lokalize-23.08.2.tar.xz"
   sha256 "80eede9b07c2507f4ff4d39d89dfe023a7010a9f922aaa5d1f7aba587d4a50d8"
   head "https://invent.kde.org/sdk/lokalize.git", branch: "master"
+  revision 1
 
   depends_on "cmake" => [:build, :test]
   depends_on "ninja" => :build
@@ -15,7 +16,7 @@ class Lokalize < Formula
   depends_on "hunspell"
   depends_on "kde-mac/kde/kf5-kross"
   depends_on "poxml"
-  depends_on "qt@5"
+  depends_on "kde-mac/kde/qt@5"
   depends_on "subversion"
   depends_on "translate-toolkit"
 

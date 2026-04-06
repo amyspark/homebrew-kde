@@ -6,6 +6,7 @@ class Kf5Kconfig < Formula
   url "https://download.kde.org/stable/frameworks/5.111/kconfig-5.111.0.tar.xz"
   sha256 "9ac079ad4a7311fd04ff5fc8a5989ef8e066b2dee8de1e2bd923bd202c140135"
   head "https://invent.kde.org/frameworks/kconfig.git", branch: "master"
+  revision 1
 
   depends_on "cmake" => [:build, :test]
   depends_on "doxygen" => :build
@@ -13,7 +14,7 @@ class Kf5Kconfig < Formula
   depends_on "graphviz" => :build
   depends_on "ninja" => :build
 
-  depends_on "qt@5"
+  depends_on "kde-mac/kde/qt@5"
 
   def install
     system "cmake", *kde_cmake_args
