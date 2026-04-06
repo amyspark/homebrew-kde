@@ -30,6 +30,7 @@ class QtAT5 < Formula
   end
 
   keg_only :versioned_formula
+  conflicts_with "qt@5", because: "Homebrew dropped QtWebkit"
 
   # Deprecating on expected date of Qt 5.15.19 open-source release which is
   # planned for 1 year after the commercial release date of 2025-05-19[^1].

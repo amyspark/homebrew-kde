@@ -8,10 +8,9 @@ class Ki18nAT5 < Formula
   ]
 
   stable do
-    url "https://download.kde.org/stable/frameworks/5.115/ki18n-5.115.0.tar.xz"
-    sha256 "d4fc34762137b5f90df78294370ffb345b6932552137359d15cdd157dbd7d6fd"
+    url "https://download.kde.org/stable/frameworks/5.116/ki18n-5.116.0.tar.xz"
+    sha256 "933250628090e240141c23acc40f796da1ff5a658987b60a0c7cc182701e6bcd"
     depends_on "kde-mac/kde/qt@5"
-    revision 1
   end
 
   head do
