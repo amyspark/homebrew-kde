@@ -6,6 +6,7 @@ class Kf5Kdbusaddons < Formula
   url "https://download.kde.org/stable/frameworks/5.116/kdbusaddons-5.116.0.tar.xz"
   sha256 "03b73a4b04c227175f17bfec9a84ae7acb9f5443adc7a1adbf7bd98926bc8e56"
   head "https://invent.kde.org/frameworks/kdbusaddons.git", branch: "master"
+  revision 1
 
   depends_on "cmake" => [:build, :test]
   depends_on "doxygen" => :build
@@ -14,7 +15,7 @@ class Kf5Kdbusaddons < Formula
   depends_on "ninja" => :build
 
   depends_on "dbus"
-  depends_on "kde-mac/kde/qt@5"
+  depends_on "qt@5"
 
   def install
     system "cmake", *kde_cmake_args

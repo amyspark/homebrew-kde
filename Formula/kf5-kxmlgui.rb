@@ -6,6 +6,7 @@ class Kf5Kxmlgui < Formula
   url "https://download.kde.org/stable/frameworks/5.116/kxmlgui-5.116.0.tar.xz"
   sha256 "636566a2530db0011c09de7f98ba83a53591e6cbdc43a2bb63ff125b991c7a40"
   head "https://invent.kde.org/frameworks/kxmlgui.git", branch: "master"
+  revision 1
 
   depends_on "cmake" => [:build, :test]
   depends_on "extra-cmake-modules@5" => [:build, :test]
@@ -15,7 +16,7 @@ class Kf5Kxmlgui < Formula
   depends_on "kde-mac/kde/kf5-attica"
   depends_on "kde-mac/kde/kf5-kglobalaccel"
   depends_on "kde-mac/kde/kf5-ktextwidgets"
-  depends_on "kde-mac/kde/qt@5"
+  depends_on "qt@5"
 
   def install
     # https://bugs.kde.org/show_bug.cgi?id=446492

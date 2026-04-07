@@ -6,6 +6,7 @@ class Kf5Ktextwidgets < Formula
   url "https://download.kde.org/stable/frameworks/5.116/ktextwidgets-5.116.0.tar.xz"
   sha256 "34807e502cc0dbb984661c9569e9dfcfb1f005c451c9f3a5afdbb016de117552"
   head "https://invent.kde.org/frameworks/ktextwidgets.git", branch: "master"
+  revision 1
 
   depends_on "cmake" => [:build, :test]
   depends_on "doxygen" => :build
@@ -17,7 +18,7 @@ class Kf5Ktextwidgets < Formula
   depends_on "kde-mac/kde/kf5-kiconthemes"
   depends_on "kde-mac/kde/kf5-kservice"
   depends_on "kde-mac/kde/kf5-sonnet"
-  depends_on "kde-mac/kde/qt@5"
+  depends_on "qt@5"
 
   def install
     system "cmake", *kde_cmake_args

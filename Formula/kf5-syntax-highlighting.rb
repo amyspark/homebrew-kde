@@ -6,6 +6,7 @@ class Kf5SyntaxHighlighting < Formula
   url "https://download.kde.org/stable/frameworks/5.116/syntax-highlighting-5.116.0.tar.xz"
   sha256 "6f8ccacebd0dc9ce050b2b23b715750c97938b3336fbbb80967920cb8c1dfaa7"
   head "https://invent.kde.org/frameworks/syntax-highlighting.git", branch: "master"
+  revision 1
 
   depends_on "cmake" => [:build, :test]
   depends_on "doxygen" => :build
@@ -13,7 +14,7 @@ class Kf5SyntaxHighlighting < Formula
   depends_on "graphviz" => :build
   depends_on "ninja" => :build
 
-  depends_on "kde-mac/kde/qt@5"
+  depends_on "qt@5"
 
   def install
     system "cmake", *kde_cmake_args

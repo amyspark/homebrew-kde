@@ -3,10 +3,11 @@ class ExtraCmakeModulesAT5 < Formula
   homepage "https://api.kde.org/frameworks/extra-cmake-modules@5/html/index.html"
 
   stable do
-    url "https://download.kde.org/stable/frameworks/5.116/extra-cmake-modules@5-5.116.0.tar.xz"
+    url "https://download.kde.org/stable/frameworks/5.116/extra-cmake-modules-5.116.0.tar.xz"
     sha256 "e8f6d11a6ef478171f845d376523ad5c56e8f7fd4bae8791942cecba0b23cd08"
-    depends_on "kde-mac/kde/qt@5" => :build
+    depends_on "qt@5" => :build
   end
+  revision 1
 
   depends_on "cmake" => [:build, :test]
   depends_on "sphinx-doc" => :build

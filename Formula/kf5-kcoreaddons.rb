@@ -6,6 +6,7 @@ class Kf5Kcoreaddons < Formula
   url "https://download.kde.org/stable/frameworks/5.116/kcoreaddons-5.116.0.tar.xz"
   sha256 "defbb4c068fcfccf7a08298ee6f7b88f9c2d3f34e4ae22b8f8e2df47dfb73174"
   head "https://invent.kde.org/frameworks/kcoreaddons.git", branch: "master"
+  revision 1
 
   depends_on "cmake" => [:build, :test]
   depends_on "doxygen" => :build
@@ -14,7 +15,7 @@ class Kf5Kcoreaddons < Formula
   depends_on "ninja" => :build
   depends_on "shared-mime-info" => :build
 
-  depends_on "kde-mac/kde/qt@5"
+  depends_on "qt@5"
 
   def install
     system "cmake", "-DUPDATE_MIME_DATABASE_EXECUTABLE=OFF", *kde_cmake_args

@@ -6,6 +6,7 @@ class Kf5Kwindowsystem < Formula
   url "https://download.kde.org/stable/frameworks/5.116/kwindowsystem-5.116.0.tar.xz"
   sha256 "7ec97633752fbde2505b40d762d933b642cae42b6b86d6e801fbdfcd2eeb5334"
   head "https://invent.kde.org/frameworks/kwindowsystem.git", branch: "master"
+  revision 1
 
   depends_on "cmake" => [:build, :test]
   depends_on "doxygen" => :build
@@ -13,7 +14,7 @@ class Kf5Kwindowsystem < Formula
   depends_on "graphviz" => :build
   depends_on "ninja" => :build
 
-  depends_on "kde-mac/kde/qt@5"
+  depends_on "qt@5"
 
   def install
     system "cmake", *kde_cmake_args

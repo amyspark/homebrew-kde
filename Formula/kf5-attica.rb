@@ -6,6 +6,7 @@ class Kf5Attica < Formula
   url "https://download.kde.org/stable/frameworks/5.116/attica-5.116.0.tar.xz"
   sha256 "681107c4dd989999cecd002c58c01ec3af8317bb9da5267809ad465750d21fea"
   head "https://invent.kde.org/frameworks/attica.git", branch: "master"
+  revision 1
 
   depends_on "cmake" => [:build, :test]
   depends_on "doxygen" => :build
@@ -13,7 +14,7 @@ class Kf5Attica < Formula
   depends_on "graphviz" => :build
   depends_on "ninja" => :build
 
-  depends_on "kde-mac/kde/qt@5"
+  depends_on "qt@5"
 
   def install
     system "cmake", *kde_cmake_args

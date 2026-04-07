@@ -5,7 +5,7 @@ class Phonon < Formula
   homepage "https://userbase.kde.org/Phonon"
   url "https://download.kde.org/stable/phonon/4.12.0/phonon-4.12.0.tar.xz"
   sha256 "3287ffe0fbcc2d4aa1363f9e15747302d0b080090fe76e5f211d809ecb43f39a"
-  revision 2
+  revision 3
   head "https://invent.kde.org/libraries/phonon.git", branch: "master"
 
   depends_on "cmake" => [:build, :test]
@@ -13,7 +13,7 @@ class Phonon < Formula
   depends_on "extra-cmake-modules@5" => [:build, :test]
   depends_on "ninja" => :build
   depends_on "glib"
-  depends_on "kde-mac/kde/qt@5"
+  depends_on "qt@5"
 
   conflicts_with "pulseaudio", because: "fatal error: 'pulse/glib-mainloop.h' file not found"
 

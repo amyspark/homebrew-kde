@@ -6,7 +6,7 @@ class Labplot < Formula
   url "https://download.kde.org/stable/labplot/labplot-2.10.1.tar.xz"
   sha256 "2b6e181517cfb6e0dfff7b895f3eb20c7ce359e6732d38545e0757c9aea2daef"
   head "https://invent.kde.org/education/labplot.git", branch: "master"
-  revision 1
+  revision 2
 
   depends_on "cmake" => [:build, :test]
   depends_on "extra-cmake-modules@5" => [:build, :test]
@@ -22,7 +22,7 @@ class Labplot < Formula
   depends_on "gsl"
   depends_on "libcerf"
   depends_on "netcdf"
-  depends_on "kde-mac/kde/qt@5"
+  depends_on "qt@5"
 
   def install
     system "cmake", *kde_cmake_args

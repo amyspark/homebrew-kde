@@ -4,7 +4,7 @@ class QcaAT2 < Formula
   url "https://download.kde.org/stable/qca/2.3.10/qca-2.3.10.tar.xz"
   sha256 "1c5b722da93d559365719226bb121c726ec3c0dc4c67dea34f1e50e4e0d14a02"
   license "LGPL-2.1-or-later"
-  revision 2
+  revision 3
 
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
@@ -14,7 +14,7 @@ class QcaAT2 < Formula
   depends_on "nss"
   depends_on "openssl@3"
   depends_on "pkcs11-helper"
-  depends_on "kde-mac/kde/qt@5"
+  depends_on "qt@5"
 
   fails_with gcc: "5"
 

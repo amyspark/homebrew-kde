@@ -4,10 +4,10 @@ class QtkeychainAT5 < Formula
   url "https://github.com/frankosterfeld/qtkeychain/archive/refs/tags/0.15.0.tar.gz"
   sha256 "f4254dc8f0933b06d90672d683eab08ef770acd8336e44dfa030ce041dc2ca22"
   license "BSD-2-Clause"
-  revision 1
+  revision 2
 
   depends_on "cmake" => :build
-  depends_on "kde-mac/kde/qt@5"
+  depends_on "qt@5"
 
   on_linux do
     depends_on "glib"

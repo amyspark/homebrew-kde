@@ -6,6 +6,7 @@ class Kf5Kplotting < Formula
   url "https://download.kde.org/stable/frameworks/5.116/kplotting-5.116.0.tar.xz"
   sha256 "bc3703f2ccd5d9d6a5e881a9476a6d21b2722aecbe5dfe48c03d1008772be579"
   head "https://invent.kde.org/frameworks/kplotting.git", branch: "master"
+  revision 1
 
   depends_on "cmake" => [:build, :test]
   depends_on "doxygen" => :build
@@ -13,7 +14,7 @@ class Kf5Kplotting < Formula
   depends_on "graphviz" => :build
   depends_on "ninja" => :build
 
-  depends_on "kde-mac/kde/qt@5"
+  depends_on "qt@5"
 
   def install
     system "cmake", *kde_cmake_args

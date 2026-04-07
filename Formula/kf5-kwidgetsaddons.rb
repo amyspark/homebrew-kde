@@ -6,6 +6,7 @@ class Kf5Kwidgetsaddons < Formula
   url "https://download.kde.org/stable/frameworks/5.116/kwidgetsaddons-5.116.0.tar.xz"
   sha256 "a8e1e054f16760e90d4c830b96d62ed066404f71c01f33e99f472795f9119565"
   head "https://invent.kde.org/frameworks/kwidgetsaddons.git", branch: "master"
+  revision 1
 
   depends_on "cmake" => [:build, :test]
   depends_on "doxygen" => :build
@@ -13,7 +14,7 @@ class Kf5Kwidgetsaddons < Formula
   depends_on "graphviz" => :build
   depends_on "ninja" => :build
 
-  depends_on "kde-mac/kde/qt@5"
+  depends_on "qt@5"
 
   def install
     system "cmake", *kde_cmake_args

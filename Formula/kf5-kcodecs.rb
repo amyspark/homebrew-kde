@@ -6,6 +6,7 @@ class Kf5Kcodecs < Formula
   url "https://download.kde.org/stable/frameworks/5.116/kcodecs-5.116.0.tar.xz"
   sha256 "a489d22e91cafcb60854c6e914969e1f3f8270b403baf2ec3a1d76ae2bd3680e"
   head "https://invent.kde.org/frameworks/kcodecs.git", branch: "master"
+  revision 1
 
   depends_on "cmake" => [:build, :test]
   depends_on "doxygen" => :build
@@ -14,7 +15,7 @@ class Kf5Kcodecs < Formula
   depends_on "graphviz" => :build
   depends_on "ninja" => :build
 
-  depends_on "kde-mac/kde/qt@5"
+  depends_on "qt@5"
 
   def install
     system "cmake", *kde_cmake_args
