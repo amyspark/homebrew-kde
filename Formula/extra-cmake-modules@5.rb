@@ -7,18 +7,18 @@ class ExtraCmakeModulesAT5 < Formula
     sha256 "e8f6d11a6ef478171f845d376523ad5c56e8f7fd4bae8791942cecba0b23cd08"
     depends_on "qt@5" => :build
   end
-  revision 1
+  revision 2
 
   depends_on "cmake" => [:build, :test]
-  depends_on "sphinx-doc" => :build
 
   keg_only :versioned_formula
 
   def install
+    # sphinx.errors.ExtensionError: Could not import extension ecm (exception: No module named 'docutils.error_reporting')
     args = %w[
-      -DBUILD_HTML_DOCS=ON
-      -DBUILD_MAN_DOCS=ON
-      -DBUILD_QTHELP_DOCS=ON
+      -DBUILD_HTML_DOCS=OFF
+      -DBUILD_MAN_DOCS=OFF
+      -DBUILD_QTHELP_DOCS=OFF
     ]
 
     system "cmake", "-S", ".", "-B", "build", *args, *std_cmake_args
